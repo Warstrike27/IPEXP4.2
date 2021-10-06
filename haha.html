@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Student Details</title>
+        <script>
+        class Student
+        {
+            constructor(name,roll_no,email)
+            {
+              this.roll_no=roll_no;
+              this.name=name;
+              this.email = email;
+            }
+
+            printStudentDetail()
+            {
+               document.writeln("<b>Name</b>: "+this.name+"<br>"+"<b>Roll no</b>: "+this.roll_no+"<br>"+"<b>Email: </b>"+this.email+"<br>")
+            }
+        }
+        Student.prototype.subject=function()
+            {
+                document.writeln("<b>2</b> "+"")
+            };    
+            name=prompt("Name : ");
+            roll_no=prompt("Roll no :");
+            email = prompt("Email: ")   
+            try{
+                    if(roll_no==0) throw "Roll no cannot be zero";
+                    else
+                    {
+                        var s2=new Student(name,roll_no,email);
+                        document.writeln("<u>Student Details</u><br>");
+                        s2.printStudentDetail();
+                        s2.subject();
+                    }
+                }
+        finally{} 
+        Student.prototype.subject=function()
+            {
+                document.writeln("<b>Class:</b> "+"D15A")
+            };
+
+            name=prompt("Name : ");
+            roll_no=prompt("Roll no :");
+            email = prompt("Email: ")
+
+              try{
+                 if(roll_no==0) throw "Roll no cannot be zero";
+                 else
+                 {
+                    var s1=new Student(name,roll_no,email);
+                    document.writeln("<u>Student Details</u><br>");
+                    s1.printStudentDetail();
+                    s1.subject();
+                 }
+              }
+              catch(err){
+                document.writeln(err)
+                    }
+    </script>
+
+    </head>
+    <body>
+        
+    </body>
+</html>
